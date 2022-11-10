@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PRO100"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="Main" Background="#FF4A9DCE">
 
     </Grid>
 </Window>
