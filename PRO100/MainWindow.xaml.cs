@@ -25,4 +25,41 @@ namespace PRO100
             InitializeComponent();
         }
     }
+
+    public class Game
+    {
+ 
+    }
+
+    public abstract class Card
+    {
+        int cardID = 0;
+        int damageValue = 0;
+        string name = "default";
+        string cardDescription = "default";
+
+        public Card()
+        {
+
+        }
+
+        public Card(int cardID, int damageValue, string name, string cardDescription)
+        {
+
+        }
+
+        virtual public void Function()
+        {
+
+        }
+
+    }
+
+    public class TestCard : Card
+    {
+
+    }
+
+
+
 }
