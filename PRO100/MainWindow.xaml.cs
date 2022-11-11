@@ -38,37 +38,37 @@ namespace PRO100
 
     public class Game
     {
- 
+        Card test = new Card(1, 1, "test", "test", "test");
     }
 
-    public abstract class Card
+    public class Card
     {
         int cardID = 0;
         int damageValue = 0;
         string name = "default";
-        string cardDescription = "default";
+        string cardFunction = "default";
+        string cardImage = "default";
 
         public Card()
         {
 
         }
 
-        public Card(int cardID, int damageValue, string name, string cardDescription)
+        public Card(int cardID, int damageValue, string name, string cardFunction, string cardImage)
         {
-
+            this.cardID = cardID;
+            this.damageValue = damageValue;
+            this.name = name;
+            this.cardFunction = cardFunction;
+            this.cardImage = cardImage;
         }
 
-        virtual public void Function()
-        {
-
-        }
 
     }
 
-    public class TestCard : Card
-    {
 
-    }
+    
+
 
 
 
