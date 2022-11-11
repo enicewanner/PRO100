@@ -20,14 +20,18 @@ namespace PRO100
     /// </summary>
     public partial class MainWindow : Window
     {
+        Game game = new Game();
         public MainWindow()
         {
             InitializeComponent();
+            game.Run(TestCard);
+
+
         }
 
         private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Player1Health.Value = Player1Health.Value + 5;
+            game.Damage(Player1Health, game.currentCard1);
         }
 
         private void TestCard2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -38,16 +42,32 @@ namespace PRO100
 
     public class Game
     {
-        Card test = new Card(1, 1, "test", "test", "test");
+        Card test = new Card(1, 50, "test", "test", "/correct-icon.png");
+        public Card currentCard1 = new Card();
+        public void Run(Image card)
+        {
+            currentCard1 = test;
+            Uri uri = new Uri(currentCard1.cardImage, UriKind.RelativeOrAbsolute);
+            ImageSource imgSource = new BitmapImage(uri);
+
+            card.Source = imgSource;
+
+        }
+
+        public void Damage(ProgressBar health, Card selectedCard)
+        {
+            health.Value = health.Value + selectedCard.damageValue;
+        }
+
     }
 
     public class Card
     {
-        int cardID = 0;
-        int damageValue = 0;
-        string name = "default";
-        string cardFunction = "default";
-        string cardImage = "default";
+        public int cardID = 0;
+        public int damageValue = 0;
+        public string name = "default";
+        public string cardFunction = "default";
+        public string cardImage = "default";
 
         public Card()
         {
@@ -62,6 +82,4 @@ namespace PRO100
             this.cardFunction = cardFunction;
             this.cardImage = cardImage;
         }
-    }
-
 }
