@@ -8,11 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="correct-icon.png" />
     <None Remove="Meeri.png" />
     <None Remove="TestCard.PNG" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="correct-icon.png" />
     <Resource Include="TestCard.PNG" />
   </ItemGroup>
 
