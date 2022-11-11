@@ -62,14 +62,6 @@ namespace PRO100
             this.cardFunction = cardFunction;
             this.cardImage = cardImage;
         }
-
-
     }
-
-
-    
-
-
-
 
 }
