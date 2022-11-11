@@ -24,6 +24,16 @@ namespace PRO100
         {
             InitializeComponent();
         }
+
+        private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Player1Health.Value = Player1Health.Value + 5;
+        }
+
+        private void TestCard2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Player1Health.Value = Player1Health.Value - 5;
+        }
     }
 
     public class Game

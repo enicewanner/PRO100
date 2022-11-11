@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRO100"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="Main" Background="#FF4A9DCE">
+        Title="Card War" Height="550" Width="819">
+    <Grid x:Name="Main" Background="#FF4B6270" Margin="0,0,0,-6">
+        <Label x:Name="lbHand" Content="Choose A Card" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="325,234,0,0"/>
+        <Image x:Name="TestCard" HorizontalAlignment="Left" Height="179" Margin="69,300,0,0" VerticalAlignment="Top" Width="123" Source="/TestCard.PNG" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="TestCard_MouseLeftButtonDown">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.348"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.304"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <ProgressBar x:Name="Player1Health" HorizontalAlignment="Center" Height="19" Margin="0,29,0,0" VerticalAlignment="Top" Width="677" Value="50" Foreground="#FF10CE12" Background="#FFEB0606"/>
+        <Image x:Name="TestCard2" HorizontalAlignment="Left" Height="179" Margin="618,310,0,0" VerticalAlignment="Top" Width="123" Source="/TestCard.PNG" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="TestCard2_MouseLeftButtonDown">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.348"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.304"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>

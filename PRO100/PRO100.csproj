@@ -7,4 +7,13 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Meeri.png" />
+    <None Remove="TestCard.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="TestCard.PNG" />
+  </ItemGroup>
+
 </Project>
