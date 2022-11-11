@@ -31,6 +31,7 @@ namespace PRO100
 
         private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            game.currentCard1.Function(game.currentCard1);
             game.Damage(Player1Health, game.currentCard1);
         }
 
@@ -42,7 +43,7 @@ namespace PRO100
 
     public class Game
     {
-        Card test = new Card(1, 50, "test", "test", "/correct-icon.png");
+        Card test = new Card(1, 5, "test", "TestFunc", "/correct-icon.png");
         public Card currentCard1 = new Card();
         public void Run(Image card)
         {
@@ -58,6 +59,8 @@ namespace PRO100
         {
             health.Value = health.Value + selectedCard.damageValue;
         }
+
+
 
     }
 
@@ -82,5 +85,24 @@ namespace PRO100
             this.cardFunction = cardFunction;
             this.cardImage = cardImage;
         }
+
+        public void Function(Card currentCard)
+        {
+            if (cardFunction == "TestFunc") currentCard.TestFunc();
+        }
+
+        public void TestFunc()
+        {
+            damageValue = 0;
+        }
+
     }
+
+
+
+
+
+
+
+
 }
