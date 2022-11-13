@@ -33,6 +33,12 @@ namespace PRO100
         {
             game.currentCard1.Function(game.currentCard1);
             game.Damage(Player1Health, game.currentCard1);
+
+            //checks which image was clicked and "removes"
+            Image imgSelected = (Image)sender;
+            imgSelected.Visibility = Visibility.Hidden;
+            
+            
         }
 
         private void TestCard2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -47,6 +53,9 @@ namespace PRO100
         public Card currentCard1 = new Card();
         public void Run(Image card)
         {
+            //Future plans: create a list of images, binding a different card to each so they display and function properly without hard-coding each
+
+
             currentCard1 = test;
             Uri uri = new Uri(currentCard1.cardImage, UriKind.RelativeOrAbsolute);
             ImageSource imgSource = new BitmapImage(uri);
@@ -93,7 +102,7 @@ namespace PRO100
 
         public void TestFunc()
         {
-            damageValue = 0;
+            //damageValue = 0;
         }
 
     }
