@@ -24,7 +24,10 @@ namespace PRO100
         public MainWindow()
         {
             InitializeComponent();
-            game.Run(TestCard);
+            List<Image> Cards = new List<Image>();
+            Cards.Add(TestCard);
+            Cards.Add(TestCard3);
+            game.Run(Cards, game.SelectedCards);
 
 
         }
@@ -50,18 +53,30 @@ namespace PRO100
     public class Game
     {
         Card test = new Card(1, 5, "test", "TestFunc", "/correct-icon.png");
+        Card test2 = new Card(1, 5, "test", "TestFunc", "/TestCard.PNG");
+        
+
         public Card currentCard1 = new Card();
-        public void Run(Image card)
+        public List<Card> SelectedCards = new List<Card>();
+
+        
+
+        //public void Run(Image card)
+        public void Run(List<Image> Cards, List<Card> SelectedCards)
         {
             //Future plans: create a list of images, binding a different card to each so they display and function properly without hard-coding each
+            SelectedCards.Add(test);
+            SelectedCards.Add(test2);
 
 
-            currentCard1 = test;
-            Uri uri = new Uri(currentCard1.cardImage, UriKind.RelativeOrAbsolute);
-            ImageSource imgSource = new BitmapImage(uri);
+            for (int i = 0; i < Cards.Count(); i++)
+            { 
+                currentCard1 = SelectedCards[i];
+                Uri uri = new Uri(currentCard1.cardImage, UriKind.RelativeOrAbsolute);
+                ImageSource imgSource = new BitmapImage(uri);
 
-            card.Source = imgSource;
-
+                Cards[i].Source = imgSource;
+            }
         }
 
         public void Damage(ProgressBar health, Card selectedCard)
