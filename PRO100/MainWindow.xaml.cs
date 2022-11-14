@@ -28,8 +28,6 @@ namespace PRO100
             Cards.Add(TestCard);
             Cards.Add(TestCard3);
             game.Run(Cards, game.SelectedCards);
-
-
         }
 
         private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -40,13 +38,6 @@ namespace PRO100
             //checks which image was clicked and "removes"
             Image imgSelected = (Image)sender;
             imgSelected.Visibility = Visibility.Hidden;
-            
-            
-        }
-
-        private void TestCard2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Player1Health.Value = Player1Health.Value - 5;
         }
     }
 
