@@ -21,10 +21,10 @@ namespace PRO100
     public partial class MainWindow : Window
     {
         Game game = new Game();
+        List<Image> Cards = new List<Image>();
         public MainWindow()
         {
             InitializeComponent();
-            List<Image> Cards = new List<Image>();
             Cards.Add(TestCard);
             Cards.Add(TestCard3);
             game.Run(Cards, game.SelectedCards);
@@ -34,12 +34,17 @@ namespace PRO100
 
         private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            game.currentCard1.Function(game.currentCard1);
-            game.Damage(Player1Health, game.currentCard1);
+
+            Image imgSelected = (Image)sender;
+
+
+            game.currentCard = game.GetSelectCard(imgSelected, Cards, game.SelectedCards);
+            
+            game.currentCard.Function(game.currentCard);
+            game.Damage(Player1Health, game.currentCard);
 
             //checks which image was clicked and "removes"
-            Image imgSelected = (Image)sender;
-            imgSelected.Visibility = Visibility.Hidden;
+            //imgSelected.Visibility = Visibility.Hidden;
             
             
         }
@@ -53,9 +58,9 @@ namespace PRO100
     public class Game
     {
         Card test = new Card(1, 5, "test", "TestFunc", "/correct-icon.png");
-        Card test2 = new Card(1, 5, "test", "TestFunc", "/TestCard.PNG");
-        
+        Card test2 = new Card(1, -5, "test", "TestFunc2", "/TestCard.PNG");
 
+        public Card currentCard = new Card();
         public Card currentCard1 = new Card();
         public List<Card> SelectedCards = new List<Card>();
 
@@ -82,6 +87,22 @@ namespace PRO100
         public void Damage(ProgressBar health, Card selectedCard)
         {
             health.Value = health.Value + selectedCard.damageValue;
+        }
+
+        public Card GetSelectCard(Image senderImage, List<Image> images, List<Card> cards)
+        {
+            Card selectedCard = new Card();
+
+            for (int i = 0; i < images.Count; i++)
+            {
+                if (images[i] == senderImage)
+                {
+                    selectedCard = cards[i];
+                }
+            }
+
+
+            return selectedCard;
         }
 
 
@@ -113,11 +134,17 @@ namespace PRO100
         public void Function(Card currentCard)
         {
             if (cardFunction == "TestFunc") currentCard.TestFunc();
+            if (cardFunction == "TestFunc2") currentCard.TestFunc2();
         }
 
         public void TestFunc()
         {
             //damageValue = 0;
+        }
+
+        public void TestFunc2()
+        {
+            //this.damageValue = 0;
         }
 
     }
