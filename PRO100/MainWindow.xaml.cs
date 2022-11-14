@@ -42,7 +42,7 @@ namespace PRO100
             game.Damage(Player1Health, game.currentCard);
 
             //checks which image was clicked and "removes"
-            Image imgSelected = (Image)sender;
+            //Image imgSelected = (Image)sender;
             imgSelected.Visibility = Visibility.Hidden;
             
             
