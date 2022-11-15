@@ -5,33 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRO100"
         mc:Ignorable="d"
-        Title="Card War" Height="550" Width="819">
+        Title="Card War" Height="570" Width="830">
     <Grid x:Name="Main" Background="#FF4B6270" Margin="0,0,0,-6">
         <Label x:Name="lbHand" Content="Choose A Card" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Margin="0,239,0,0"/>
         <ProgressBar x:Name="Player1Health" HorizontalAlignment="Center" Height="19" Margin="0,29,0,0" VerticalAlignment="Top" Width="677" Value="50" Foreground="#FF10CE12" Background="#FFEB0606"/>
-        <Image x:Name="TestCard" Height="179" Margin="15,310,0,51" Width="123" Source="/TestCard.PNG" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left"/>
-        <Image x:Name="TestCard2" Height="179" Margin="182,308,0,53" Width="123" Source="/TestCard.PNG" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left"/>
-        <Image x:Name="TestCard3" Height="179" Margin="361,305,0,56" Width="123" Source="/TestCard.PNG" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left"/>
-        <Image x:Name="TestCard4" Height="179" Margin="514,306,0,55" Width="123" Source="/TestCard.PNG" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0.348"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="0.304"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="TestCard5" Height="179" Margin="681,306,0,55" Width="123" Source="/TestCard.PNG" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0.348"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="0.304"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+        <Image x:Name="TestCard" Height="179" Margin="10,310,0,51" Width="123" Source="/Attack.png" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left"/>
+        <Image x:Name="TestCard2" Height="179" Margin="178,310,0,51" Width="123" Source="/Attack.png" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left"/>
+        <Image x:Name="TestCard3" Height="179" Margin="353,310,0,51" Width="123" Source="/Attack.png" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left"/>
+        <Image x:Name="TestCard4" Height="179" Margin="523,310,0,51" Width="123" Source="/Attack.png" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left"/>
+        <Image x:Name="TestCard5" Height="179" Margin="686,310,0,51" Width="123" Source="/Attack.png" MouseLeftButtonDown="TestCard_MouseLeftButtonDown" Cursor="Hand" HorizontalAlignment="Left"/>
 
     </Grid>
 </Window>

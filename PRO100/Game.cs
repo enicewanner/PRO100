@@ -22,8 +22,8 @@ namespace PRO100
     public class Game
     {
         Card test = new Card(1, 5, "test", "TestFunc", "/correct-icon.png");
-        Card test2 = new Card(1, -5, "test", "TestFunc2", "/TestCard.PNG");
-        Card testRand = new Card(1, 0, "test", "RandomDmg", "/TestCard.PNG");
+        Card test2 = new Card(1, -5, "test", "TestFunc2", "/Attack.png");
+        Card testRand = new Card(1, 0, "test", "RandomDmg", "/Attack.png");
 
         public Card currentCard = new Card();
         public Card currentCard1 = new Card();
