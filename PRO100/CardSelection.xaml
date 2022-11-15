@@ -9,15 +9,15 @@
     <Grid x:Name="Card_Select_Screen" Background="#FF4B6270">
         <Label x:Name="lblCardSelect" Content="Choose 5 Cards to Take into Battle" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Image x:Name="Card1" HorizontalAlignment="Left" Height="111" Margin="72,97,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
-        <Image x:Name="Card2" HorizontalAlignment="Left" Height="111" Margin="213,97,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card2_MouseLeftButtonDown"/>
-        <Image x:Name="Card3" HorizontalAlignment="Left" Height="111" Margin="362,97,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card3_MouseLeftButtonDown"/>
-        <Image x:Name="Card4" HorizontalAlignment="Left" Height="111" Margin="507,97,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card4_MouseLeftButtonDown"/>
-        <Image x:Name="Card5" HorizontalAlignment="Left" Height="111" Margin="655,97,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card5_MouseLeftButtonDown"/>
-        <Image x:Name="Card6" HorizontalAlignment="Left" Height="111" Margin="72,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card6_MouseLeftButtonDown"/>
-        <Image x:Name="Card7" HorizontalAlignment="Left" Height="111" Margin="213,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card7_MouseLeftButtonDown"/>
-        <Image x:Name="Card8" HorizontalAlignment="Left" Height="111" Margin="362,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card8_MouseLeftButtonDown"/>
-        <Image x:Name="Card9" HorizontalAlignment="Left" Height="111" Margin="507,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card9_MouseLeftButtonDown"/>
-        <Image x:Name="Card10" HorizontalAlignment="Left" Height="111" Margin="655,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card10_MouseLeftButtonDown"/>
+        <Image x:Name="Card2" HorizontalAlignment="Left" Height="111" Margin="213,97,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card3" HorizontalAlignment="Left" Height="111" Margin="362,97,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card4" HorizontalAlignment="Left" Height="111" Margin="507,97,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card5" HorizontalAlignment="Left" Height="111" Margin="655,97,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card6" HorizontalAlignment="Left" Height="111" Margin="72,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card7" HorizontalAlignment="Left" Height="111" Margin="213,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card8" HorizontalAlignment="Left" Height="111" Margin="362,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card9" HorizontalAlignment="Left" Height="111" Margin="507,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card10" HorizontalAlignment="Left" Height="111" Margin="655,258,0,0" VerticalAlignment="Top" Width="79" Source="/TestCard.PNG" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
         <Border x:Name="CardBorder1" BorderBrush="Black" BorderThickness="5,5,5,5" Width="86" Height="122" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="67,92,0,0" Visibility="Hidden"/>
         <Border x:Name="CardBorder2" BorderBrush="Black" BorderThickness="5,5,5,5" Width="86" Height="122" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="208,92,0,0" Visibility="Hidden"/>
         <Border x:Name="CardBorder3" BorderBrush="Black" BorderThickness="5,5,5,5" Width="88" Height="122" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="356,92,0,0" Visibility="Hidden"/>

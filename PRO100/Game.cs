@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PRO100
-{
+{ 
     public class Game
     {
         Card test = new Card(1, 5, "test", "TestFunc", "/correct-icon.png");
@@ -22,21 +23,24 @@ namespace PRO100
 
         public Card currentCard = new Card();
         public Card currentCard1 = new Card();
-        public List<Card> SelectedCards = new List<Card>();
+        public ArrayList SelectedCards = new ArrayList();
+        
+        
 
 
 
         //public void Run(Image card)
-        public void Run(List<Image> Cards, List<Card> SelectedCards)
+        public void Run(List<Image> Cards, ArrayList SelectedCards)
         {
             //Future plans: create a list of images, binding a different card to each so they display and function properly without hard-coding each
             SelectedCards.Add(test);
             SelectedCards.Add(test2);
+            
 
 
-            for (int i = 0; i < Cards.Count(); i++)
+            for (int i = 0; i < Cards.Count; i++)
             {
-                currentCard1 = SelectedCards[i];
+                currentCard1 = (Card)SelectedCards[i];
                 Uri uri = new Uri(currentCard1.cardImage, UriKind.RelativeOrAbsolute);
                 ImageSource imgSource = new BitmapImage(uri);
 
@@ -49,7 +53,7 @@ namespace PRO100
             health.Value = health.Value + selectedCard.damageValue;
         }
 
-        public Card GetSelectCard(Image senderImage, List<Image> images, List<Card> cards)
+        public Card GetSelectCard(Image senderImage, List<Image> images, ArrayList cards)
         {
             Card selectedCard = new Card();
 
@@ -57,7 +61,7 @@ namespace PRO100
             {
                 if (images[i] == senderImage)
                 {
-                    selectedCard = cards[i];
+                    selectedCard = (Card)cards[i];
                 }
             }
 
