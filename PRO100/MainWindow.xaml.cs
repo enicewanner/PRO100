@@ -26,8 +26,9 @@ namespace PRO100
         {
             InitializeComponent();
             Cards.Add(TestCard);
+            Cards.Add(TestCard2);
             Cards.Add(TestCard3);
-            game.Run(Cards, game.SelectedCards);
+            game.CreatePlayerCards(Cards, game.SelectedCards);
         }
 
         private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -43,7 +44,7 @@ namespace PRO100
 
             //checks which image was clicked and "removes"
             //Image imgSelected = (Image)sender;
-            imgSelected.Visibility = Visibility.Hidden;
+            //imgSelected.Visibility = Visibility.Hidden;
             
             
         }

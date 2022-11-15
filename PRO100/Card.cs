@@ -32,6 +32,8 @@ namespace PRO100
         {
             if (cardFunction == "TestFunc") currentCard.TestFunc();
             if (cardFunction == "TestFunc2") currentCard.TestFunc2();
+            if (cardFunction == "EmptyFunc") currentCard.EmptyFunc();
+            if (cardFunction == "RandomDmg") currentCard.RandomDmg();
         }
 
         public void TestFunc()
@@ -43,6 +45,19 @@ namespace PRO100
         {
             //this.damageValue = 0;
         }
+
+        public void EmptyFunc()
+        {
+
+        }
+
+        public void RandomDmg()
+        {
+            var rand = new Random();
+            this.damageValue = rand.Next(1, 11); 
+        }
+
+
 
     }
 }
