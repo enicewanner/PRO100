@@ -18,17 +18,22 @@ namespace PRO100
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
+
+
     public partial class MainWindow : Window
     {
-        Game game = new Game();
+        //Game game = new Game();
         List<Image> Cards = new List<Image>();
+        
         public MainWindow()
         {
             InitializeComponent();
             Cards.Add(TestCard);
             Cards.Add(TestCard2);
             Cards.Add(TestCard3);
-            game.CreatePlayerCards(Cards, game.SelectedCards);
+            GameCont.game.CreatePlayerCards(Cards, GameCont.game.SelectedCards);
         }
 
         private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -37,10 +42,10 @@ namespace PRO100
             Image imgSelected = (Image)sender;
 
 
-            game.currentCard = game.GetSelectCard(imgSelected, Cards, game.SelectedCards);
-            
-            game.currentCard.Function(game.currentCard);
-            game.Damage(Player1Health, game.currentCard);
+            GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.game.SelectedCards);
+
+            GameCont.game.currentCard.Function(GameCont.game.currentCard);
+            GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
 
             //checks which image was clicked and "removes"
             //Image imgSelected = (Image)sender;

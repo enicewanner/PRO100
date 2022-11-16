@@ -43,6 +43,7 @@ namespace PRO100
             SelectedCards.Add(testRand);
             AllCards.Add(test);
             AllCards.Add(test2);
+            AllCards.Add(testRand);
             
 
 
@@ -93,9 +94,10 @@ namespace PRO100
 
 
     }
-        //Allows use of a "Global Variable" for game
-        static class GameCont
-        {
-            public static Game game;
-        }
+    //Allows use of a "Global Variable" for game
+    static class GameCont
+    {
+        public static Game game = new Game();
+    }
+
 }

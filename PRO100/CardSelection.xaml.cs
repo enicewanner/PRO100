@@ -50,7 +50,8 @@ namespace PRO100
             borders.Add(CardBorder8);
             borders.Add(CardBorder9);
             borders.Add(CardBorder10);
-
+            
+            
         }
 
         private void Card1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -59,6 +60,9 @@ namespace PRO100
             {
                 if (images[i] == (Image)sender)
                 {
+
+
+
                     if (borders[i].Visibility == Visibility.Hidden)
                     {
                         borders[i].Visibility = Visibility.Visible;
