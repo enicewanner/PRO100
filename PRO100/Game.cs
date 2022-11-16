@@ -25,32 +25,58 @@ namespace PRO100
         Card test2 = new Card(1, -5, "test", "TestFunc2", "/Attack.png");
         Card testRand = new Card(1, 0, "test", "RandomDmg", "/Attack.png");
 
+
         public Card currentCard = new Card();
         public Card currentCard1 = new Card();
         public ArrayList SelectedCards = new ArrayList();
+        public ArrayList SelectedCardsP2 = new ArrayList();
         public ArrayList AllCards = new ArrayList();
-        
+
+        public int currentPlayer = 1;
         
 
 
+
+        public void CreateAllCardsList(ArrayList AllCards)
+        {
+            AllCards.Add(test);
+            AllCards.Add(test2);
+            AllCards.Add(testRand);
+            AllCards.Add(testRand);
+            AllCards.Add(testRand);
+            AllCards.Add(testRand);
+            AllCards.Add(testRand);
+            AllCards.Add(testRand);
+            AllCards.Add(testRand);
+            AllCards.Add(test);
+        }
+
+        public void CreateSelectedCardList(List<Border> Selected, ArrayList SelectedCards)
+        {
+            for (int i = 0; i < Selected.Count; i++)
+            {
+                if (Selected[i].Visibility == Visibility.Visible)
+                {
+                    SelectedCards.Add(AllCards[i]);
+                }
+            }
+        }
 
         //public void Run(Image card)
         public void CreatePlayerCards(List<Image> Cards, ArrayList SelectedCards)
         {
             //Future plans: create a list of images, binding a different card to each so they display and function properly without hard-coding each
-            SelectedCards.Add(test);
-            SelectedCards.Add(test2);
-            SelectedCards.Add(testRand);
-            AllCards.Add(test);
-            AllCards.Add(test2);
-            AllCards.Add(testRand);
+            //GameCont.game.SelectedCards.Add(test);
+            //GameCont.game.SelectedCards.Add(test2);
+            //GameCont.game.SelectedCards.Add(testRand);
+
             
 
 
-            for (int i = 0; i < Cards.Count; i++)
+            for (int i = 0; i < SelectedCards.Count; i++)
             {
-                currentCard1 = (Card)SelectedCards[i];
-                Uri uri = new Uri(currentCard1.cardImage, UriKind.RelativeOrAbsolute);
+                currentCard = (Card)SelectedCards[i];
+                Uri uri = new Uri(currentCard.cardImage, UriKind.RelativeOrAbsolute);
                 ImageSource imgSource = new BitmapImage(uri);
 
                 Cards[i].Source = imgSource;

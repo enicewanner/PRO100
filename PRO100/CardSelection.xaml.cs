@@ -29,6 +29,8 @@ namespace PRO100
         {
             InitializeComponent();
 
+            GameCont.game.CreateAllCardsList(GameCont.game.AllCards);
+
             images.Add(Card1);
             images.Add(Card2);
             images.Add(Card3);
@@ -51,6 +53,7 @@ namespace PRO100
             borders.Add(CardBorder9);
             borders.Add(CardBorder10);
             
+            GameCont.game.CreatePlayerCards(images, GameCont.game.AllCards);
             
         }
 
@@ -93,6 +96,7 @@ namespace PRO100
             if (CardsSelected == 5)
             {
                 this.Hide();
+                GameCont.game.CreateSelectedCardList(borders, GameCont.game.SelectedCards);
                 MainWindow main = new MainWindow();
                 main.Show();
             }

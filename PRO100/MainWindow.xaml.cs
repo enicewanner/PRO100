@@ -33,7 +33,9 @@ namespace PRO100
             Cards.Add(TestCard);
             Cards.Add(TestCard2);
             Cards.Add(TestCard3);
-            GameCont.game.CreatePlayerCards(Cards, GameCont.game.SelectedCards);
+            Cards.Add(TestCard4);
+            Cards.Add(TestCard5);
+            GameCont.game.UpdatePlayerCards(Cards, GameCont.game.SelectedCards);
         }
 
         private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
