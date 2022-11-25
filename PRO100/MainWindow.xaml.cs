@@ -35,7 +35,7 @@ namespace PRO100
             Cards.Add(TestCard3);
             Cards.Add(TestCard4);
             Cards.Add(TestCard5);
-            GameCont.game.UpdatePlayerCards(Cards, GameCont.game.SelectedCards);
+            GameCont.game.UpdatePlayerCards(Cards, GameCont.player1.playerDeck, GameCont.player1);
         }
 
         private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -44,7 +44,7 @@ namespace PRO100
             Image imgSelected = (Image)sender;
 
 
-            GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.game.SelectedCards);
+            GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.player1.playerDeck);
 
             GameCont.game.currentCard.Function(GameCont.game.currentCard);
             GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
@@ -53,6 +53,16 @@ namespace PRO100
             //Image imgSelected = (Image)sender;
             //imgSelected.Visibility = Visibility.Hidden;
             
+            if (GameCont.game.currentPlayer == 1)
+            {
+                GameCont.game.UpdatePlayerCards(Cards, GameCont.player2.playerDeck, GameCont.player1);
+                GameCont.game.currentPlayer = 2;
+            }
+            else
+            {
+                GameCont.game.UpdatePlayerCards(Cards, GameCont.player1.playerDeck, GameCont.player2);
+                GameCont.game.currentPlayer = 1;
+            }
             
         }
 

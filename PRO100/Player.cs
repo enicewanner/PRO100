@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace PRO100
 {
-    internal class Player
+    public class Player
     {
-        int incomingDamage = 0;
-        int outgoingDamage = 0;
+        public int incomingDamage = 0;
+        public int outgoingDamage = 0;
 
-        ArrayList playerDeck = new ArrayList();
+        public ArrayList playerDeck = new ArrayList();
 
     }
 }

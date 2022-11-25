@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 
 
 namespace PRO100
-{ 
+{
 
 
     public class Game
@@ -33,7 +33,7 @@ namespace PRO100
         public ArrayList AllCards = new ArrayList();
 
         public int currentPlayer = 1;
-        
+
 
 
 
@@ -51,16 +51,25 @@ namespace PRO100
             AllCards.Add(test);
         }
 
-        public void CreateSelectedCardList(List<Border> Selected, ArrayList SelectedCards)
+        public void CreateSelectedCardList(List<Border> Selected, ArrayList SelectedCards, Player currentPlayer)
         {
+            SelectedCards.Clear();
             for (int i = 0; i < Selected.Count; i++)
             {
                 if (Selected[i].Visibility == Visibility.Visible)
                 {
                     SelectedCards.Add(AllCards[i]);
+
                 }
             }
+            currentPlayer.playerDeck = SelectedCards;
+            for (int i = 0; i < Selected.Count; i++)
+            {
+                Selected[i].Visibility = Visibility.Hidden;
+            }
         }
+
+
 
         //public void Run(Image card)
         public void CreatePlayerCards(List<Image> Cards, ArrayList SelectedCards)
@@ -70,7 +79,7 @@ namespace PRO100
             //GameCont.game.SelectedCards.Add(test2);
             //GameCont.game.SelectedCards.Add(testRand);
 
-            
+
 
 
             for (int i = 0; i < SelectedCards.Count; i++)
@@ -83,12 +92,12 @@ namespace PRO100
             }
         }
 
-        public void UpdatePlayerCards(List<Image> Cards, ArrayList SelectedCards)
+        public void UpdatePlayerCards(List<Image> Cards, ArrayList SelectedCardsU, Player currentPlayer)
         {
             //Future plans: create a list of images, binding a different card to each so they display and function properly without hard-coding each
             for (int i = 0; i < Cards.Count; i++)
             {
-                currentCard1 = (Card)SelectedCards[i];
+                currentCard1 = (Card)SelectedCardsU[i];
                 Uri uri = new Uri(currentCard1.cardImage, UriKind.RelativeOrAbsolute);
                 ImageSource imgSource = new BitmapImage(uri);
 
@@ -124,6 +133,8 @@ namespace PRO100
     static class GameCont
     {
         public static Game game = new Game();
+        public static Player player1 = new Player();
+        public static Player player2 = new Player();
     }
 
 }

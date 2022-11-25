@@ -20,6 +20,7 @@ namespace PRO100
     public partial class Window1 : Window
     {
         int CardsSelected = 0;
+        int playerHasSelected = 0;
         List<Image> images = new List<Image>();
         List<Border> borders = new List<Border>();
 
@@ -52,9 +53,9 @@ namespace PRO100
             borders.Add(CardBorder8);
             borders.Add(CardBorder9);
             borders.Add(CardBorder10);
-            
+
             GameCont.game.CreatePlayerCards(images, GameCont.game.AllCards);
-            
+
         }
 
         private void Card1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -95,10 +96,19 @@ namespace PRO100
         {
             if (CardsSelected == 5)
             {
-                this.Hide();
-                GameCont.game.CreateSelectedCardList(borders, GameCont.game.SelectedCards);
-                MainWindow main = new MainWindow();
-                main.Show();
+                if (playerHasSelected == 0)
+                {
+                    GameCont.game.CreateSelectedCardList(borders, GameCont.game.SelectedCards, GameCont.player1);
+                    playerHasSelected = 1;
+                    CardsSelected = 0;
+                }
+                else
+                {
+                    GameCont.game.CreateSelectedCardList(borders, GameCont.game.SelectedCards, GameCont.player2);
+                    MainWindow main = new MainWindow();
+                    main.Show();
+                }
+                //this.Hide();
             }
             else
             {
