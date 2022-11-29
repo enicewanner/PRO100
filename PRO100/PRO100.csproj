@@ -9,15 +9,32 @@
 
   <ItemGroup>
     <None Remove="Attack.png" />
+    <None Remove="CheapShot.png" />
     <None Remove="correct-icon.png" />
-    <None Remove="Meeri.png" />
+    <None Remove="Drunken Fists.png" />
+    <None Remove="Malicious Kindness.png" />
+    <None Remove="Mirror Attack.png" />
+    <None Remove="Mystery.png" />
+    <None Remove="Overkill.png" />
+    <None Remove="Shield Bash.png" />
     <None Remove="TestCard.PNG" />
+    <None Remove="Violent Assault.png" />
+    <None Remove="WhiteFlag.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Attack.png" />
+    <Resource Include="CheapShot.png" />
     <Resource Include="correct-icon.png" />
+    <Resource Include="Drunken Fists.png" />
+    <Resource Include="Malicious Kindness.png" />
+    <Resource Include="Mirror Attack.png" />
+    <Resource Include="Mystery.png" />
+    <Resource Include="Overkill.png" />
+    <Resource Include="Shield Bash.png" />
     <Resource Include="TestCard.PNG" />
+    <Resource Include="Violent Assault.png" />
+    <Resource Include="WhiteFlag.png" />
   </ItemGroup>
 
 </Project>

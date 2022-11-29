@@ -14,10 +14,10 @@
         <Image x:Name="Card4" HorizontalAlignment="Left" Height="111" Margin="507,97,0,0" VerticalAlignment="Top" Width="79" Source="/Malicious Kindness.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
         <Image x:Name="Card5" HorizontalAlignment="Left" Height="111" Margin="655,97,0,0" VerticalAlignment="Top" Width="79" Source="/Mirror Attack.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
         <Image x:Name="Card6" HorizontalAlignment="Left" Height="111" Margin="72,258,0,0" VerticalAlignment="Top" Width="79" Source="/Drunken Fists.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
-        <Image x:Name="Card7" HorizontalAlignment="Left" Height="111" Margin="213,258,0,0" VerticalAlignment="Top" Width="79" Source="/Attack.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
-        <Image x:Name="Card8" HorizontalAlignment="Left" Height="111" Margin="362,258,0,0" VerticalAlignment="Top" Width="79" Source="/Attack.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
-        <Image x:Name="Card9" HorizontalAlignment="Left" Height="111" Margin="507,258,0,0" VerticalAlignment="Top" Width="79" Source="/Attack.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
-        <Image x:Name="Card10" HorizontalAlignment="Left" Height="111" Margin="655,258,0,0" VerticalAlignment="Top" Width="79" Source="/Attack.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card7" HorizontalAlignment="Left" Height="111" Margin="213,258,0,0" VerticalAlignment="Top" Width="79" Source="/CheapShot.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card8" HorizontalAlignment="Left" Height="111" Margin="362,258,0,0" VerticalAlignment="Top" Width="79" Source="/Mystery.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card9" HorizontalAlignment="Left" Height="111" Margin="507,258,0,0" VerticalAlignment="Top" Width="79" Source="/Overkill.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
+        <Image x:Name="Card10" HorizontalAlignment="Left" Height="111" Margin="655,258,0,0" VerticalAlignment="Top" Width="79" Source="/Violent Assault.png" Cursor="Hand" MouseLeftButtonDown="Card1_MouseLeftButtonDown"/>
         <Border x:Name="CardBorder1" BorderBrush="Black" BorderThickness="5,5,5,5" Width="84" Height="120" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="67,92,0,0" Visibility="Hidden"/>
         <Border x:Name="CardBorder2" BorderBrush="Black" BorderThickness="5,5,5,5" Width="84" Height="120" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="208,92,0,0" Visibility="Hidden"/>
         <Border x:Name="CardBorder3" BorderBrush="Black" BorderThickness="5,5,5,5" Width="84" Height="120" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="356,92,0,0" Visibility="Hidden"/>

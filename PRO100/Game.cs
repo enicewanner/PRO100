@@ -21,9 +21,16 @@ namespace PRO100
 
     public class Game
     {
-        Card test = new Card(1, 5, "test", "TestFunc", "/correct-icon.png");
-        Card test2 = new Card(1, -5, "test", "TestFunc2", "/Attack.png");
-        Card testRand = new Card(1, 0, "test", "RandomDmg", "/Attack.png");
+        Card Drunk = new Card(1, 5, "test", "RandomDmg", "/Drunken Fists.png");
+        Card CheapShot = new Card(1, -5, "test", "TestFunc2", "/CheapShot.png");
+        Card Attack = new Card(1, 0, "test", "TestFunc1", "/Attack.png");
+        Card Kindness = new Card(1, 0, "test", "RandomDmg", "/Malicious Kindness.png");
+        Card Mirror = new Card(1, 0, "test", "RandomDmg", "/Mirror Attack.png");
+        Card Mystery = new Card(1, 0, "test", "RandomDmg", "/Mystery.png");
+        Card Overkill = new Card(1, 0, "test", "RandomDmg", "/Overkill.png");
+        Card Shield = new Card(1, 0, "test", "RandomDmg", "/Shield Bash.png");
+        Card Assault = new Card(1, 0, "test", "RandomDmg", "/Violent Assault.png");
+        Card WhiteFlag = new Card(1, 0, "test", "RandomDmg", "/WhiteFlag.png");
 
 
         public Card currentCard = new Card();
@@ -41,16 +48,16 @@ namespace PRO100
 
         public void CreateAllCardsList(ArrayList AllCards)
         {
-            AllCards.Add(test);
-            AllCards.Add(test2);
-            AllCards.Add(testRand);
-            AllCards.Add(testRand);
-            AllCards.Add(testRand);
-            AllCards.Add(testRand);
-            AllCards.Add(testRand);
-            AllCards.Add(testRand);
-            AllCards.Add(testRand);
-            AllCards.Add(test);
+            AllCards.Add(Attack);
+            AllCards.Add(Drunk);
+            AllCards.Add(CheapShot);
+            AllCards.Add(Kindness);
+            AllCards.Add(Mirror);
+            AllCards.Add(Mystery);
+            AllCards.Add(Overkill);
+            AllCards.Add(Shield);
+            AllCards.Add(Assault);
+            AllCards.Add(WhiteFlag);
         }
 
         public void CreateSelectedCardList(List<Border> Selected, ArrayList SelectedCards, Player currentPlayer)
