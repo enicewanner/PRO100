@@ -107,7 +107,7 @@ namespace PRO100
                     GameCont.game.CreateSelectedCardList(borders, GameCont.player2.playerDeck, GameCont.player2);
                     MainWindow main = new MainWindow();
                     main.Show();
-                    this.Hide();
+                    this.Close();
                 }
             }
             else
