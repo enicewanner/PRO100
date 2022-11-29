@@ -54,7 +54,7 @@ namespace PRO100
         public void RandomDmg()
         {
             var rand = new Random();
-            this.damageValue = rand.Next(1, 11); 
+            this.damageValue = rand.Next(1, 11);
         }
 
 

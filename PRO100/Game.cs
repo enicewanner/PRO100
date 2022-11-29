@@ -34,6 +34,8 @@ namespace PRO100
 
         public int currentPlayer = 1;
 
+        int turnsPassed = 0;
+
 
 
 
@@ -95,10 +97,10 @@ namespace PRO100
         public void UpdatePlayerCards(List<Image> Cards, ArrayList SelectedCardsU, Player currentPlayer)
         {
             //Future plans: create a list of images, binding a different card to each so they display and function properly without hard-coding each
-            for (int i = 0; i < Cards.Count; i++)
+            for (int i = 0; i < SelectedCards.Count; i++)
             {
-                currentCard1 = (Card)SelectedCardsU[i];
-                Uri uri = new Uri(currentCard1.cardImage, UriKind.RelativeOrAbsolute);
+                currentCard = (Card)SelectedCardsU[i];
+                Uri uri = new Uri(currentCard.cardImage, UriKind.RelativeOrAbsolute);
                 ImageSource imgSource = new BitmapImage(uri);
 
                 Cards[i].Source = imgSource;

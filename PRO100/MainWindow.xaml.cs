@@ -26,7 +26,7 @@ namespace PRO100
     {
         //Game game = new Game();
         List<Image> Cards = new List<Image>();
-        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace PRO100
             Cards.Add(TestCard3);
             Cards.Add(TestCard4);
             Cards.Add(TestCard5);
-            GameCont.game.UpdatePlayerCards(Cards, GameCont.player1.playerDeck, GameCont.player1);
+            GameCont.game.CreatePlayerCards(Cards, GameCont.player1.playerDeck);
         }
 
         private void TestCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -52,26 +52,26 @@ namespace PRO100
             //checks which image was clicked and "removes"
             //Image imgSelected = (Image)sender;
             //imgSelected.Visibility = Visibility.Hidden;
-            
+
             if (GameCont.game.currentPlayer == 1)
             {
-                GameCont.game.UpdatePlayerCards(Cards, GameCont.player2.playerDeck, GameCont.player1);
+                GameCont.game.CreatePlayerCards(Cards, GameCont.player2.playerDeck);
                 GameCont.game.currentPlayer = 2;
             }
-            else
+            else if (GameCont.game.currentPlayer == 2)
             {
-                GameCont.game.UpdatePlayerCards(Cards, GameCont.player1.playerDeck, GameCont.player2);
+                GameCont.game.CreatePlayerCards(Cards, GameCont.player1.playerDeck);
                 GameCont.game.currentPlayer = 1;
             }
-            
+
         }
 
 
     }
 
-   
 
-   
+
+
 
 
 

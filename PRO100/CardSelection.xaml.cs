@@ -98,17 +98,17 @@ namespace PRO100
             {
                 if (playerHasSelected == 0)
                 {
-                    GameCont.game.CreateSelectedCardList(borders, GameCont.game.SelectedCards, GameCont.player1);
+                    GameCont.game.CreateSelectedCardList(borders, GameCont.player1.playerDeck, GameCont.player1);
                     playerHasSelected = 1;
                     CardsSelected = 0;
                 }
-                else
+                else if (playerHasSelected == 1)
                 {
-                    GameCont.game.CreateSelectedCardList(borders, GameCont.game.SelectedCards, GameCont.player2);
+                    GameCont.game.CreateSelectedCardList(borders, GameCont.player2.playerDeck, GameCont.player2);
                     MainWindow main = new MainWindow();
                     main.Show();
+                    this.Hide();
                 }
-                //this.Hide();
             }
             else
             {
