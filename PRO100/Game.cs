@@ -21,16 +21,16 @@ namespace PRO100
 
     public class Game
     {
-        Card Drunk = new Card(1, 5, "test", "RandomDmg", "/Drunken Fists.png");
-        Card CheapShot = new Card(1, -5, "test", "TestFunc2", "/CheapShot.png");
-        Card Attack = new Card(1, 0, "test", "TestFunc1", "/Attack.png");
-        Card Kindness = new Card(1, 0, "test", "RandomDmg", "/Malicious Kindness.png");
-        Card Mirror = new Card(1, 0, "test", "RandomDmg", "/Mirror Attack.png");
-        Card Mystery = new Card(1, 0, "test", "RandomDmg", "/Mystery.png");
-        Card Overkill = new Card(1, 0, "test", "RandomDmg", "/Overkill.png");
-        Card Shield = new Card(1, 0, "test", "RandomDmg", "/Shield Bash.png");
-        Card Assault = new Card(1, 0, "test", "RandomDmg", "/Violent Assault.png");
-        Card WhiteFlag = new Card(1, 0, "test", "RandomDmg", "/WhiteFlag.png");
+        Card Drunk = new Card(1, 5, "test", "RandomDmg", "CardImages/Drunken Fists.png");
+        Card CheapShot = new Card(1, -5, "test", "TestFunc2", "CardImages/CheapShot.png");
+        Card Attack = new Card(1, 0, "test", "TestFunc1", "CardImages/Attack.png");
+        Card Kindness = new Card(1, 0, "test", "RandomDmg", "CardImages/Malicious Kindness.png");
+        Card Mirror = new Card(1, 0, "test", "RandomDmg", "CardImages/Mirror Attack.png");
+        Card Mystery = new Card(1, 0, "test", "RandomDmg", "CardImages/Mystery.png");
+        Card Overkill = new Card(1, 0, "test", "RandomDmg", "CardImages/Overkill.png");
+        Card Shield = new Card(1, 0, "test", "RandomDmg", "CardImages/Shield Bash.png");
+        Card Assault = new Card(1, 0, "test", "RandomDmg", "CardImages/Violent Assault.png");
+        Card WhiteFlag = new Card(1, 0, "test", "RandomDmg", "CardImages/WhiteFlag.png");
 
 
         public Card currentCard = new Card();

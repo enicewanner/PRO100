@@ -23,18 +23,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Attack.png" />
-    <Resource Include="CheapShot.png" />
-    <Resource Include="correct-icon.png" />
-    <Resource Include="Drunken Fists.png" />
-    <Resource Include="Malicious Kindness.png" />
-    <Resource Include="Mirror Attack.png" />
-    <Resource Include="Mystery.png" />
-    <Resource Include="Overkill.png" />
-    <Resource Include="Shield Bash.png" />
-    <Resource Include="TestCard.PNG" />
-    <Resource Include="Violent Assault.png" />
-    <Resource Include="WhiteFlag.png" />
+    <Resource Include="CardImages\Attack.png" />
+    <Resource Include="CardImages\CheapShot.png" />
+    <Resource Include="CardImages\correct-icon.png" />
+    <Resource Include="CardImages\Drunken Fists.png" />
+    <Resource Include="CardImages\Malicious Kindness.png" />
+    <Resource Include="CardImages\Mirror Attack.png" />
+    <Resource Include="CardImages\Mystery.png" />
+    <Resource Include="CardImages\Overkill.png" />
+    <Resource Include="CardImages\Shield Bash.png" />
+    <Resource Include="CardImages\TestCard.PNG" />
+    <Resource Include="CardImages\Violent Assault.png" />
+    <Resource Include="CardImages\WhiteFlag.png" />
   </ItemGroup>
 
 </Project>
