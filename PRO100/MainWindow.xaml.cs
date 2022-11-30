@@ -59,8 +59,9 @@ namespace PRO100
                 //GameCont.player1.playerDeck.Remove(GameCont.game.currentCard);
                 GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.player1.playerDeck);
 
+                GameCont.game.CalculateDamage(GameCont.player1, GameCont.player2, GameCont.game.currentCard);
                 GameCont.game.currentCard.Function(GameCont.game.currentCard);
-                GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
+                //GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
 
                 GameCont.game.currentCard.used = true;
                 GameCont.game.CreatePlayerCards(Cards, GameCont.player2.playerDeck);
@@ -72,8 +73,10 @@ namespace PRO100
                 //GameCont.player2.playerDeck.Remove(GameCont.game.currentCard);
                 GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.player2.playerDeck);
 
+                GameCont.game.CalculateDamage(GameCont.player2, GameCont.player1, GameCont.game.currentCard);
                 GameCont.game.currentCard.Function(GameCont.game.currentCard);
-                GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
+                GameCont.game.Damage(Player1Health, GameCont.game.currentCard, GameCont.player1, GameCont.player2);
+                //GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
 
                 GameCont.game.currentCard.used = true;
                 GameCont.game.CreatePlayerCards(Cards, GameCont.player1.playerDeck);
@@ -81,6 +84,9 @@ namespace PRO100
 
                 GameCont.game.turnsPassed++;
             }
+
+
+
 
             if (GameCont.game.turnsPassed >= 5)
             {

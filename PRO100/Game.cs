@@ -22,8 +22,8 @@ namespace PRO100
     public class Game
     {
         Card Drunk = new Card(1, 5, "test", "RandomDmg", "CardImages/Drunken Fists.png");
-        Card CheapShot = new Card(1, -5, "test", "TestFunc2", "CardImages/CheapShot.png");
-        Card Attack = new Card(1, 0, "test", "TestFunc1", "CardImages/Attack.png");
+        Card CheapShot = new Card(1, 5, "test", "TestFunc2", "CardImages/CheapShot.png");
+        Card Attack = new Card(1, 50, "test", "TestFunc1", "CardImages/Attack.png");
         Card Kindness = new Card(1, 0, "test", "RandomDmg", "CardImages/Malicious Kindness.png");
         Card Mirror = new Card(1, 0, "test", "RandomDmg", "CardImages/Mirror Attack.png");
         Card Mystery = new Card(1, 0, "test", "RandomDmg", "CardImages/Mystery.png");
@@ -31,6 +31,7 @@ namespace PRO100
         Card Shield = new Card(1, 0, "test", "RandomDmg", "CardImages/Shield Bash.png");
         Card Assault = new Card(1, 0, "test", "RandomDmg", "CardImages/Violent Assault.png");
         Card WhiteFlag = new Card(1, 0, "test", "RandomDmg", "CardImages/WhiteFlag.png");
+        
 
 
         public Card currentCard = new Card();
@@ -101,7 +102,7 @@ namespace PRO100
 
                 if (currentCard.used == true)
                 {
-                    Cards[i].Visibility = Visibility.Hidden;
+                   Cards[i].Visibility = Visibility.Hidden;
                 }
                 else
                 {
@@ -126,9 +127,19 @@ namespace PRO100
             }
         }
 
-        public void Damage(ProgressBar health, Card selectedCard)
+        public void CalculateDamage(Player playerAttacking, Player playerDefending, Card SelectedCard)
         {
-            health.Value = health.Value + selectedCard.damageValue;
+            playerAttacking.outgoingDamage = SelectedCard.damageValue;
+            playerDefending.incomingDamage = playerAttacking.outgoingDamage;
+        }
+
+        public void Damage(ProgressBar health, Card selectedCard, Player player1, Player player2)
+        {
+            health.Value = health.Value + (-(player1.incomingDamage)) + (player2.incomingDamage);
+
+            //health.Value = health.Value + selectedCard.damageValue;
+
+
         }
 
         public Card GetSelectCard(Image senderImage, List<Image> images, ArrayList cards)
