@@ -13,19 +13,21 @@ namespace PRO100
         public string name = "default";
         public string cardFunction = "default";
         public string cardImage = "default";
+        public bool used = false;
 
         public Card()
         {
 
         }
 
-        public Card(int cardID, int damageValue, string name, string cardFunction, string cardImage)
+        public Card(int cardID, int damageValue, string name, string cardFunction, string cardImage, bool used = false)
         {
             this.cardID = cardID;
             this.damageValue = damageValue;
             this.name = name;
             this.cardFunction = cardFunction;
             this.cardImage = cardImage;
+            this.used = used;
         }
 
         public void Function(Card currentCard)

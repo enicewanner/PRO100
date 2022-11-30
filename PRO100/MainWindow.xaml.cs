@@ -44,10 +44,11 @@ namespace PRO100
             Image imgSelected = (Image)sender;
 
 
-            GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.player1.playerDeck);
 
-            GameCont.game.currentCard.Function(GameCont.game.currentCard);
-            GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
+
+            
+
+
 
             //checks which image was clicked and "removes"
             //Image imgSelected = (Image)sender;
@@ -55,15 +56,36 @@ namespace PRO100
 
             if (GameCont.game.currentPlayer == 1)
             {
+                //GameCont.player1.playerDeck.Remove(GameCont.game.currentCard);
+                GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.player1.playerDeck);
+
+                GameCont.game.currentCard.Function(GameCont.game.currentCard);
+                GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
+
+                GameCont.game.currentCard.used = true;
                 GameCont.game.CreatePlayerCards(Cards, GameCont.player2.playerDeck);
                 GameCont.game.currentPlayer = 2;
             }
             else if (GameCont.game.currentPlayer == 2)
             {
+
+                //GameCont.player2.playerDeck.Remove(GameCont.game.currentCard);
+                GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.player2.playerDeck);
+
+                GameCont.game.currentCard.Function(GameCont.game.currentCard);
+                GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
+
+                GameCont.game.currentCard.used = true;
                 GameCont.game.CreatePlayerCards(Cards, GameCont.player1.playerDeck);
                 GameCont.game.currentPlayer = 1;
+
+                GameCont.game.turnsPassed++;
             }
 
+            if (GameCont.game.turnsPassed >= 5)
+            {
+                //this.Close();
+            }
         }
 
 

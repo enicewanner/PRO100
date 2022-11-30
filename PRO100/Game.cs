@@ -41,7 +41,7 @@ namespace PRO100
 
         public int currentPlayer = 1;
 
-        int turnsPassed = 0;
+        public int turnsPassed = 0;
 
 
 
@@ -98,6 +98,15 @@ namespace PRO100
                 ImageSource imgSource = new BitmapImage(uri);
 
                 Cards[i].Source = imgSource;
+
+                if (currentCard.used == true)
+                {
+                    Cards[i].Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    Cards[i].Visibility = Visibility.Visible;
+                }
             }
         }
 
@@ -111,6 +120,9 @@ namespace PRO100
                 ImageSource imgSource = new BitmapImage(uri);
 
                 Cards[i].Source = imgSource;
+
+
+
             }
         }
 
