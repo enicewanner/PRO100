@@ -32,20 +32,16 @@ namespace PRO100
 
         public void Function(Card currentCard)
         {
-            if (cardFunction == "TestFunc") currentCard.TestFunc();
-            if (cardFunction == "TestFunc2") currentCard.TestFunc2();
             if (cardFunction == "EmptyFunc") currentCard.EmptyFunc();
             if (cardFunction == "RandomDmg") currentCard.RandomDmg();
-        }
-
-        public void TestFunc()
-        {
-            //damageValue = 0;
-        }
-
-        public void TestFunc2()
-        {
-            //this.damageValue = 0;
+            if (cardFunction == "WhiteFlag") currentCard.WhiteFlag();
+            if (cardFunction == "Mystery") currentCard.Mystery();
+            if (cardFunction == "CheapShot") currentCard.CheapShot();
+            if (cardFunction == "Kindness") currentCard.Kindness();
+            if (cardFunction == "Mirror") currentCard.Mirror();
+            if (cardFunction == "Overkill") currentCard.Overkill();
+            if (cardFunction == "Shield") currentCard.Shield();
+            if (cardFunction == "Assault") currentCard.Assault();
         }
 
         public void EmptyFunc()
@@ -56,13 +52,54 @@ namespace PRO100
         public void RandomDmg()
         {
             var rand = new Random();
-            this.damageValue = rand.Next(1, 11);
+            this.damageValue = rand.Next(1, 10);
         }
 
+        public void WhiteFlag()
+        {
+            if(GameCont.game.currentPlayer == 1)
+            {
+                GameCont.player1.incomingDamage = 0;
+            }
+            else
+            {
+                GameCont.player2.incomingDamage = 0;
+            }
+        }
 
+        public void Mystery()
+        {
+            
+        }
 
+        public void CheapShot()
+        {
+
+        }
+
+        public void Kindness()
+        {
+
+        }
+
+        public void Mirror()
+        {
+
+        }
+
+        public void Overkill()
+        {
+
+        }
+
+        public void Shield()
+        {
+
+        }
+
+        public void Assault()
+        {
+
+        }
     }
-
-
-
 }
