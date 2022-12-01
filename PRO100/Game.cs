@@ -101,7 +101,7 @@ namespace PRO100
 
                 if (currentCard.used == true)
                 {
-                    Cards[i].Visibility = Visibility.Hidden;
+                   Cards[i].Visibility = Visibility.Hidden;
                 }
                 else
                 {
@@ -124,11 +124,23 @@ namespace PRO100
 
 
             }
+
+
         }
 
-        public void Damage(ProgressBar health, Card selectedCard)
+        public void CalculateDamage(Player playerAttacking, Player playerDefending, Card SelectedCard)
         {
-            health.Value = health.Value + selectedCard.damageValue;
+            playerAttacking.outgoingDamage = SelectedCard.damageValue;
+            playerDefending.incomingDamage = playerAttacking.outgoingDamage;
+        }
+
+        public void Damage(ProgressBar health, Card selectedCard, Player player1, Player player2)
+        {
+            health.Value = health.Value + (-(player1.incomingDamage)) + (player2.incomingDamage);
+
+            //health.Value = health.Value + selectedCard.damageValue;
+
+
         }
 
         public Card GetSelectCard(Image senderImage, List<Image> images, ArrayList cards)

@@ -74,7 +74,7 @@ namespace PRO100
 
         public void CheapShot()
         {
-
+            
         }
 
         public void Kindness()
