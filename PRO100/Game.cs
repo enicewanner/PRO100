@@ -126,6 +126,8 @@ namespace PRO100
 
 
             }
+
+
         }
 
         public void CalculateDamage(Player playerAttacking, Player playerDefending, Card SelectedCard)

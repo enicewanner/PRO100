@@ -46,7 +46,7 @@ namespace PRO100
 
 
 
-            
+
 
 
 
@@ -56,8 +56,8 @@ namespace PRO100
 
             if (GameCont.game.currentPlayer == 1)
             {
-                //GameCont.player1.playerDeck.Remove(GameCont.game.currentCard);
                 GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.player1.playerDeck);
+                GameCont.player1.playerDeck.Remove(GameCont.game.currentCard);
 
                 GameCont.game.CalculateDamage(GameCont.player1, GameCont.player2, GameCont.game.currentCard);
                 GameCont.game.currentCard.Function(GameCont.game.currentCard);
@@ -70,8 +70,8 @@ namespace PRO100
             else if (GameCont.game.currentPlayer == 2)
             {
 
-                //GameCont.player2.playerDeck.Remove(GameCont.game.currentCard);
                 GameCont.game.currentCard = GameCont.game.GetSelectCard(imgSelected, Cards, GameCont.player2.playerDeck);
+                GameCont.player2.playerDeck.Remove(GameCont.game.currentCard);
 
                 GameCont.game.CalculateDamage(GameCont.player2, GameCont.player1, GameCont.game.currentCard);
                 GameCont.game.currentCard.Function(GameCont.game.currentCard);
@@ -83,6 +83,7 @@ namespace PRO100
                 GameCont.game.currentPlayer = 1;
 
                 GameCont.game.turnsPassed++;
+                Cards[5 - GameCont.game.turnsPassed].Visibility = Visibility.Hidden;
             }
 
 
