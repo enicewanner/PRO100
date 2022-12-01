@@ -31,6 +31,7 @@ namespace PRO100
         Card Shield = new Card(1, 0, "test", "RandomDmg", "CardImages/Shield Bash.png");
         Card Assault = new Card(1, 0, "test", "RandomDmg", "CardImages/Violent Assault.png");
         Card WhiteFlag = new Card(1, 0, "test", "RandomDmg", "CardImages/WhiteFlag.png");
+        public Card Blank = new Card(0, 0, "blank", "EmptyFunc", "CardImages/correct-icon.png");
         
 
 

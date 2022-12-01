@@ -63,7 +63,7 @@ namespace PRO100
                 GameCont.game.currentCard.Function(GameCont.game.currentCard);
                 //GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
 
-                GameCont.game.currentCard.used = true;
+                //GameCont.game.currentCard.used = true;
                 GameCont.game.CreatePlayerCards(Cards, GameCont.player2.playerDeck);
                 GameCont.game.currentPlayer = 2;
             }
@@ -78,7 +78,7 @@ namespace PRO100
                 GameCont.game.Damage(Player1Health, GameCont.game.currentCard, GameCont.player1, GameCont.player2);
                 //GameCont.game.Damage(Player1Health, GameCont.game.currentCard);
 
-                GameCont.game.currentCard.used = true;
+                //GameCont.game.currentCard.used = true;
                 GameCont.game.CreatePlayerCards(Cards, GameCont.player1.playerDeck);
                 GameCont.game.currentPlayer = 1;
 

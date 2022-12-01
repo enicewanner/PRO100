@@ -36,6 +36,8 @@ namespace PRO100
             if (cardFunction == "TestFunc2") currentCard.TestFunc2();
             if (cardFunction == "EmptyFunc") currentCard.EmptyFunc();
             if (cardFunction == "RandomDmg") currentCard.RandomDmg();
+
+            this.used = true;
         }
 
         public void TestFunc()
@@ -50,7 +52,7 @@ namespace PRO100
 
         public void EmptyFunc()
         {
-
+            
         }
 
         public void RandomDmg()
