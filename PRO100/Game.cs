@@ -22,12 +22,12 @@ namespace PRO100
     public class Game
     {
         Card Drunk = new Card(1, 0, "test", "RandomDmg", "CardImages/Drunken Fists.png");
-        Card CheapShot = new Card(1, 0, "test", "CheapShot", "CardImages/CheapShot.png");
+        Card CheapShot = new Card(1, 6, "test", "CheapShot", "CardImages/CheapShot.png");
         Card Attack = new Card(1, 5, "test", "EmptyFunc", "CardImages/Attack.png");
         Card Kindness = new Card(1, 1, "test", "Kindness", "CardImages/Malicious Kindness.png");
-        Card Mirror = new Card(1, 0, "test", "Mirror", "CardImages/Mirror Attack.png");
-        Card Mystery = new Card(1, 0, "test", "Mystery", "CardImages/Mystery.png");
-        Card Overkill = new Card(1, 0, "test", "Overkill", "CardImages/Overkill.png");
+        Card Mirror = new Card(1, 4, "test", "Mirror", "CardImages/Mirror Attack.png");
+        Card Mystery = new Card(1, 3, "test", "Mystery", "CardImages/Mystery.png");
+        Card Overkill = new Card(1, 8, "test", "Overkill", "CardImages/Overkill.png");
         Card Shield = new Card(1, 2, "test", "Shield", "CardImages/Shield Bash.png");
         Card Assault = new Card(1, 6, "test", "Assault", "CardImages/Violent Assault.png");
         Card WhiteFlag = new Card(1, 0, "test", "WhiteFlag", "CardImages/WhiteFlag.png");
