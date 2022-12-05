@@ -91,7 +91,21 @@ namespace PRO100
 
             if (GameCont.game.turnsPassed >= 5)
             {
-                //this.Close();
+                this.Close();
+                if (Player1Health.Value > 50)
+                {
+                    MessageBox.Show("Player 1 wins!");
+                }
+                if (Player1Health.Value < 50)
+                {
+                    MessageBox.Show("Player 2 wins!");
+                }
+                if (Player1Health.Value == 50)
+                {
+                    MessageBox.Show("You both suck");
+                }
+
+
             }
         }
 
